@@ -4,3 +4,9 @@ https://www.google.com/search?q=npm+express&oq=npm+e&aqs=chrome.1.69i57j0i512l5j
 crear .env
 
 npm i cors (proteje superficialmente)
+
+tags git hub
+
+git tag -a v1.00 "fin seccion 8"
+git push --tags
+heroku git:remote -a restserver-curso-node-andreshu
