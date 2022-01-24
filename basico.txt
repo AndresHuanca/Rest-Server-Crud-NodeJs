@@ -1,0 +1,6 @@
+npm init -y
+npm i express dotenv (crea web server- variables de entorno)
+https://www.google.com/search?q=npm+express&oq=npm+e&aqs=chrome.1.69i57j0i512l5j69i60l2.2026j0j7&sourceid=chrome&ie=UTF-8
+crear .env
+
+npm i cors (proteje superficialmente)
