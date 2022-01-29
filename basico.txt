@@ -10,3 +10,22 @@ tags git hub
 git tag -a v1.00 "fin seccion 8"
 git push --tags
 heroku git:remote -a restserver-curso-node-andreshu
+
+https://mongoosejs.com/
+npm i mongoose 
+
+para la encriptacion de contraseñas
+npm i bcryptjs
+
+para validaciones 
+npm i express-validator  (coleccion de midlewers)
+
+isEmpty(pregunta si esta vacio) 
+
+crear roles en mongodb colecciones nuevas 
+centralizar isrole
+no mostrar la _vv y el password
+
+//para optimizar las validaciones  si estan en el controlador
+hacerlo en los helpérs adecuarlo y luego importarlo a las rutas
+
