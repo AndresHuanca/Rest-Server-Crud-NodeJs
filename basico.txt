@@ -29,3 +29,13 @@ no mostrar la _vv y el password
 //para optimizar las validaciones  si estan en el controlador
 hacerlo en los helpérs adecuarlo y luego importarlo a las rutas
 
+variables de entorno heroku 
+heroku config :ver variables de entornod e heroku
+
+: establecer, esta en el process.env.nombre
+heroku config:set MONGODB_CNN="mongodb+srv://user_node_cafe:4pW
+
+para Borrar 
+heroku config:unset nombre
+
+deplegar en heroku 
