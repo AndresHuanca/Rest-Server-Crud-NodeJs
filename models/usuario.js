@@ -33,10 +33,12 @@ const UsuarioSchema = Schema ({
     },
 });
 
-//sobreescribir funcion toJSON para no enviar el password y el _vv
+//sobreescribir funcion toJSON para no enviar el password y el _vv y el _id
 UsuarioSchema.methods.toJSON = function() {
 
-    const {__v, password, ...usuario } = this.toObject();
+    const {__v, password, _id, ...usuario } = this.toObject();
+    // cambia nombre de _id a uid
+    usuario.uid = _id;
     return usuario;
 
 };

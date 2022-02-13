@@ -39,3 +39,23 @@ para Borrar
 heroku config:unset nombre
 
 deplegar en heroku 
+git push heroku main
+
+para crear token primero en model/server
+luego crear en routes 
+crear auth en controlador 
+
+instalar paquete para jwt
+npm i jsonwebtoken
+se crea en los helpers
+
+validacion son el jwt para eliminar usuario lo haroa solo un admin
+generalmente slos jwt se envian en los headers
+
+obtenr informacion del usuario autenticado
+validar si no esiste el usuario o esta eliminado de la BD
+
+middleware: verificar rol de administrador
+middleware: verificar rol de definidos en las rutas
+
+para el deploid exportar del .env 
