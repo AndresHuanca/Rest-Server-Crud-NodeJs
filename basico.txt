@@ -40,6 +40,9 @@ heroku config :ver variables de entornod e heroku
 : establecer, esta en el process.env.nombre en el CMD
 heroku config:set MONGODB_CNN="mongodb+srv://user_node_cafe:4pW
 
+git push heroku main              enviar a heroku 
+
+
 para Borrar 
 heroku config:unset nombre
 
