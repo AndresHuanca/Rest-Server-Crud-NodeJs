@@ -29,10 +29,15 @@ no mostrar la _vv y el password
 //para optimizar las validaciones  si estan en el controlador
 hacerlo en los helpérs adecuarlo y luego importarlo a las rutas
 
+gi status para ver si hay algun commit pendiente en el CMD
+git add .
+git commit -m "example.env add"
+
+git rm .env --cached elimina del github
 variables de entorno heroku 
 heroku config :ver variables de entornod e heroku
 
-: establecer, esta en el process.env.nombre
+: establecer, esta en el process.env.nombre en el CMD
 heroku config:set MONGODB_CNN="mongodb+srv://user_node_cafe:4pW
 
 para Borrar 
