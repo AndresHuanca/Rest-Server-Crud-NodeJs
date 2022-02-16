@@ -60,7 +60,7 @@
         }
 
         const button = document.getElementById('google_signout');
-        button.onclick = () => {
+        button.onclick = async() => {
             console.log(google.accounts.id)
             google.accounts.id.disableAutoSelect()
 
