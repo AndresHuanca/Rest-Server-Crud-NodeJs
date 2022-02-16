@@ -35,7 +35,7 @@ router.put('/:id',[
 
 ], usuariosPut );
 
-//post  - middleware segundo argumento , crear errores
+//post  - middleware segundo argumento , crear errores- crear
 router.post('/', [
         //validaciones de los argumentos enviados en post
         check( 'nombre', 'El nombre  no es valido' ).not().isEmpty(), //isEmpty(¿es vacio?)(no().isEmpty 'no es correo')
@@ -52,7 +52,7 @@ router.post('/', [
 router.delete('/:id', [
         validarJWT,
         // esAdminRole,
-        tieneRole( 'ADMIN_ROLE', 'VENTAS_ROLE', 'OTHER_ROLE'),
+        tieneRole( 'ADMIN_ROLE', 'VENTAS_ROLE', 'USER_ROLE'),
         check( 'id', 'No es un Id  Valido' ).isMongoId(),
         check( 'id' ).custom( existeUsuarioPorId ),
         validarCampos

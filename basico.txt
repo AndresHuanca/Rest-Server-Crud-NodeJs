@@ -49,6 +49,11 @@ heroku config:unset nombre
 deplegar en heroku 
 git push heroku main
 
+para ver los heroores CMD de heroku en las peticiones
+heroku logs -n 100 
+en vivo
+heroku logs -n 100 --tail
+
 para crear token primero en model/server
 luego crear en routes 
 crear auth en controlador 
@@ -67,3 +72,13 @@ middleware: verificar rol de administrador
 middleware: verificar rol de definidos en las rutas
 
 para el deploid exportar del .env 
+
+16/02/2022 Login by Google chrome
+
+1. registro en google identity 
+https://developers.google.com/identity/gsi/web/guides/overview - https://console.developers.google.com/projectselector2/apis/dashboard?pli=1&supportedpurview=project
+
+2.colocar boton de google
+3. config backend
+4.npm install google-auth-library --save (para node)
+5. el helper crear google.ferify.js

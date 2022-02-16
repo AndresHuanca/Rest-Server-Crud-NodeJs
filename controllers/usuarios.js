@@ -40,7 +40,7 @@ const usuariosGet = async(req, res = request ) => {
 
 };
 
-//put
+//put - Actualizar
 const usuariosPut = async(req, res) => {
     //para dinamico
     const { id } = req.params;
