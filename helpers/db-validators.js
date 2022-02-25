@@ -1,8 +1,9 @@
 //importando Role
 const Role = require('../models/role');
 
-//importando modelo usuario
-const Usuario = require('../models/usuario');
+//importando modelo usuario //importando modelo categoria
+const { Usuario, Categoria, Producto } = require('../models');
+
 
 //validar role que esta en la base de datos
 const esRoleValido = async(rol='') => {
@@ -30,9 +31,58 @@ const existeUsuarioPorId= async ( id = '' ) => {
     }
 
 };
+// ----------------------CATEGORIA-----------------------------
+// Validaciones de BD de CATEGORIAS
+const existeCategoriaPorId = async ( id = '' ) => { 
+    // verifficar si el id existe
+    existeCategoria = await Categoria.findById(id);
+    if( !existeCategoria ) {
+        throw new Error( `El id ${ id } no existe`)
+        
+    }
+};
+
+// Validación de Nombre unico de Categorias
+const nombreCategoriaExiste = async ( nombre = '' ) => {
+    // Convirtiendo a toUpperCase porque asi esta en la DB
+    nombre = nombre.toUpperCase();  
+    //verificar si el correo existe
+    existeNombre = await Categoria.findOne( { nombre } );
+    if( existeNombre ) {
+        throw new Error( `El nombre ${ nombre } ya existe` );
+    }
+
+};
+
+//-----------------------PRODUCTO----------------------------------- 
+// Validación de Nombre unico de Productos
+const nombreProductoExiste = async ( nombre = '' ) => {  
+    // Convirtiendo a toUpperCase porque asi esta en la DB
+    nombre = nombre.toUpperCase();
+    //verificar si el correo existe
+    const existeNombre = await Producto.findOne( { nombre } );
+    if( existeNombre ) {
+        throw new Error( `El nombre ${ nombre } ya existe` );
+    }
+
+};
+
+// Validaciones de BD de CATEGORIAS
+const existeProductoPorId = async ( id = '' ) => { 
+    // verifficar si el id existe
+    existeProducto = await Producto.findById(id);
+    if( !existeProducto ) {
+        throw new Error( `El id ${ id } no existe`)
+        
+    }
+};
 
 module.exports = {
     esRoleValido,
     emailExiste,
-    existeUsuarioPorId
+    existeUsuarioPorId,
+    existeCategoriaPorId,
+    nombreCategoriaExiste,
+    nombreProductoExiste,
+    existeProductoPorId
 };

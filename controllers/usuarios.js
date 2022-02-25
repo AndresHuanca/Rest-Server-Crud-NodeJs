@@ -46,7 +46,7 @@ const usuariosPut = async(req, res) => {
     const { id } = req.params;
 
     //desustructurar
-    const { _id, password, google, correo, ...resto } = req.body;
+    const { _id, password, google, correo, estado, ...resto } = req.body;
 
     if ( password ) {
          //encriptar la contraseña
