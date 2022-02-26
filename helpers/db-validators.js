@@ -77,6 +77,18 @@ const existeProductoPorId = async ( id = '' ) => {
     }
 };
 
+// Validaciones de Carga de Archivos
+const coleccionesPermitidas =  (coleccion = '', colecciones = [] ) => {
+
+    const incluida = colecciones.includes( coleccion );
+
+    if( !incluida ) {
+        throw new Error( `La coleccion ${ coleccion } no existe, permitidas ${ colecciones }`);
+    }
+
+    return true;
+};
+
 module.exports = {
     esRoleValido,
     emailExiste,
@@ -84,5 +96,6 @@ module.exports = {
     existeCategoriaPorId,
     nombreCategoriaExiste,
     nombreProductoExiste,
-    existeProductoPorId
+    existeProductoPorId,
+    coleccionesPermitidas
 };

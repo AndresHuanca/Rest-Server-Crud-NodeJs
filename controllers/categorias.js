@@ -89,7 +89,7 @@ const actualizarCategoria = async( req, res ) => {
 
 };
 
-// borrarCategoria - estado:false
+// borrarCategoria - estado:false<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 const borrarCategoria = async( req, res ) => {
 

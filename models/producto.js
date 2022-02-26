@@ -30,6 +30,7 @@ const ProductoSchema = Schema({
     },
     descripcion: { type: String },
     disponibles: { type: Boolean, default: true },
+    img: { type: String }
 });
 
 //sobreescribir funcion toJSON para no enviar el password y el _vv y el _id en el postman

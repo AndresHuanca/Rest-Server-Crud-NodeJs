@@ -108,4 +108,36 @@ https://developers.google.com/identity/gsi/web/guides/overview - https://console
     Realizar Busquedas
         1er crear ruta en models.server
         2do en server routes debe tner mismo  nombre el archivo de routes and controller
-    
+    --------------------------------------------------------------------------------------
+    CARGA DE ARCHIVOS
+         Ruta-controller- model
+        server- constructor -rutas 
+        instalar dependecia https://www.npmjs.com/package/express-fileupload
+        npm i express-fileupload
+        en el server colocar el nuevo  middleware de example de la pagina
+        validaciones y ruta de guardar archivo en el controller
+        crear carpeta de guardar los archivos en backend
+        ../uploads "apunta lugar donde esta el controler"
+        separar extensionesValidas
+        validar extension
+        para generar uids unicos de los archivos
+        instalar npm i uuid 
+        guardar en upload imagnes con uid unico
+        hepler mediante promesas y modificacion de nombre
+        crear carpetas de destino y tipos de archivoa a recibir
+        crear un put con middlewares y una forma nueva de middlewares
+        actualizar imagen de usuario
+        imposrtara los modelos y que tengan donde guardara las imgs
+        si se copia y pega significa que se puede optimizar
+        optimizar and save ultim image
+        importar path and fs para borrar archivos
+        retornar imagenes son res.senffile()
+        colocar en gitignore los uploads
+        instalar cloudinary 
+        npm i cloudinary
+        https://cloudinary.com/console/c-e8e126f5e1fec2b2c0497f57d6fe26
+        subir imagens o videos 
+        api envaoriment variable en variables de enmtoerno .ENV 
+        luego nuevo actualizar imagen con cloudinary
+        luego a heroku subir nueva variable de entorno CLOUDINARY_URL=
+        
